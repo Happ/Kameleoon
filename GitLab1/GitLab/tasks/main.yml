@@ -1,0 +1,65 @@
+---
+# tasks file for GitLab
+
+  - name: Set locale
+    shell: sudo -u ansible localectl set-locale LANG=en_US.UTF-8
+
+  - name: Install curl
+    dnf:
+      name: curl
+      state: present
+
+  - name: Install policycoreutils3-python
+    dnf:
+      name: policycoreutils-python-utils
+      state: present
+
+  - name: Install postfix
+    dnf:
+      name: postfix
+      state: present
+
+  - name: Enable and start postfix
+    systemd:
+      name: postfix
+      state: started
+      enabled: true
+
+  - name: Install perl
+    dnf:
+      name: perl
+      state: present
+
+  - name: Permit traffic in default zone for https Gitlab
+    firewalld:
+      service: https
+      permanent: true
+      state: enabled
+      immediate: yes
+
+##  - name: Install GitLab repo
+##    shell: curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | bash
+
+##  - name: Install GitLab
+##    shell: EXTERNAL_URL=https://"{{ GitLab_URL }}" dnf install -y gitlab-ee
+
+
+  - name: Copy GitLab .rpm
+    copy:
+      src: gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm
+      dest: /tmp
+
+  - name: Install GitLab
+    shell: EXTERNAL_URL=https://"{{ GitLab_URL }}" dnf localinstall -y /tmp/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm
+
+  - name: Reconfigure GitLab
+    shell: gitlab-ctl reconfigure
+
+  - name: Display root password
+    command: cat initial_root_password chdir=/etc/gitlab
+    register: command_output
+
+  - name: Print to console
+    debug:
+      msg: "{{command_output.stdout}}"
+...

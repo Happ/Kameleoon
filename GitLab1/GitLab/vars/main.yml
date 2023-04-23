@@ -1,0 +1,4 @@
+---
+# vars file for GitLab	
+
+  GitLab_URL: gitlab."{{ Domain_URL }}"

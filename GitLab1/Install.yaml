@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+  become_user: root
+  
+  vars:
+    IP_Addr: 192.168.13.145
+    Domain_URL: info.test
+##    GitLab_URL: https://gitlab."{{ Domain_URL }}"
+##    Prometheus_URL: http://prometheus."{{ Domain_URL }}"
+##    Grafana_URL: http://grafana."{{ Domain_URL }}"
+ 
+  roles:
+    - GitLab
+    - Monitoring

@@ -1,0 +1,6 @@
+---
+# vars file for Monitoring
+ 
+  Prometheus_URL: prometheus."{{ Domain_URL }}"
+  Grafana_URL: grafana."{{ Domain_URL }}"
+

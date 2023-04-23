@@ -1,0 +1,68 @@
+---
+# tasks file for Monitoring
+
+  - name: Install Grafana
+    dnf:
+      name: grafana
+      state: present
+
+  - name: Enable and start Grafana
+    systemd:
+      name: grafana-server
+      state: started
+      enabled: true
+
+  - name: Permit traffic in default zone for http Nginx
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+      immediate: yes
+
+  - name: Copy selinux.sh
+    copy:
+      src: selinux.sh
+      dest: /tmp/
+
+  - name: Install Nginx
+    dnf:
+      name: nginx
+      state: present
+
+  - name: Copy Nginx config
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx
+
+  - name: Enable and start Nginx
+    systemd:
+      name: nginx
+      state: started
+      enabled: true
+
+  - name: Add Prometheus to hosts
+    shell: echo "{{IP_Addr }}  {{ Prometheus_URL }}"  >> /etc/hosts
+
+  - name: Add Grafana to hosts
+    shell: echo "{{IP_Addr }}  {{ Grafana_URL }}"  >> /etc/hosts
+
+ 
+  - name: curl Prometheus
+    shell: curl Head http://"{{ Prometheus_URL }}"
+
+  - name: Curl Grafana
+    shell: curl Head http://"{{ Grafana_URL }}"
+
+  - name: Selinux
+    shell: bash /tmp/selinux.sh
+
+...
+
+
+
+
+
+
+
+
+
