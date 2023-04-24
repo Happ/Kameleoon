@@ -9,6 +9,8 @@ Ansible имеет доступ к этому хосту и может дела�
 
 Имя домена и IP адрес указываются в файле Install.yaml в секции vars.
 
+Так же надо указать Домен для Prometheus и Grafana в фале ~Monitoring/files/nginx.conf
+
 Так же необходимо добавить записи типа: 
 ---
 
@@ -46,6 +48,8 @@ It is assumed that we have created either a virtual machine running CentOS-Strea
 Ansible has access to this host and can sudo without a password.
 
 The domain name and IP address are specified in the Install.yaml file in the vars section.
+
+You also need to specify the domain for Prometheus and Grafana in the ~Monitoring/files/nginx.conf file
 
 We also need to add entries like:
 ---
