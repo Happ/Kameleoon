@@ -20,9 +20,9 @@ GitLab будет доступен по ссылке https://gitlab.(мой до
 Prometheus  будет доступен по ссылке http://prometheus.(мой домен)
 Grafana будет доступена по ссылке http://grafana.(мой домен)
 
-**!!! Роль использует (отсутствующий по причине большого размера файл  ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm) !!!
+**!!! Роль использует (отсутствующий по причине большого размера файл  ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm) !!!**
 
-**!!! Надо либо заменить файл пустышку на пакет  gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm, либо закомментировать секцию и раскомментировать вышестоящие секции !!!
+**!!! Надо либо заменить файл пустышку на пакет  gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm, либо закомментировать секцию и раскомментировать вышестоящие секции !!!**
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -49,6 +49,6 @@ Prometheus will be available at http://prometheus.(my domain)
 
 Grafana will be available at http://grafana.(my domain)
 
-**!!! Role uses (missing file ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm due to large size) !!!
+**!!! Role uses (missing file ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm due to large size) !!!**
 
-**!!! You must either replace the empty file with the gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm package, or comment out the section and uncomment the higher sections !!!
+**!!! You must either replace the empty file with the gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm package, or comment out the section and uncomment the higher sections !!!**
