@@ -16,7 +16,7 @@ IP хоста gitlab.(мой домен)
 IP хоста prometheus.(мой домен)
 
 IP хоста grafana.(мой домен)
----
+
 
 либо в DNS, либо как вариант в свой /etc/hosts
 ---
@@ -26,7 +26,7 @@ GitLab будет доступен по ссылке https://gitlab.(мой до
 Prometheus  будет доступен по ссылке http://prometheus.(мой домен)
 
 Grafana будет доступена по ссылке http://grafana.(мой домен)
----
+
 
 **!!! Роль использует (отсутствующий по причине большого размера файл  ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm) !!!**
 
@@ -49,7 +49,7 @@ IP of host gitlab.(my domain)
 IP of host prometheus.(my domain)
 
 IP of host grafana.(my domain)
----
+
 
 either in DNS, or alternatively in your /etc/hosts
 ---
@@ -59,7 +59,7 @@ GitLab will be available at https://gitlab.(my domain)
 Prometheus will be available at http://prometheus.(my domain)
 
 Grafana will be available at http://grafana.(my domain)
----
+
 
 **!!! Role uses (missing file ~GitLab/files/gitlab-ee-15.10.3-ee.0.el8.x86_64.rpm due to large size) !!!**
 
