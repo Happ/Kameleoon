@@ -35,7 +35,7 @@ Grafana будет доступена по ссылке http://grafana.(мой �
 
 Инсталяция.
 ---
-Выполнить **ansible-playbook -i hosts Install.yaml**
+Выполнить:  **ansible-playbook -i hosts Install.yaml**
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -72,6 +72,6 @@ Warning
 
 Installation.
 --- 
-Run **ansible-playbook -i hosts Install.yaml**
+Run:  **ansible-playbook -i hosts Install.yaml**
 
 
