@@ -18,9 +18,8 @@ IP хоста prometheus.(мой домен)
 
 IP хоста grafana.(мой домен)
 
-
 либо в DNS, либо как вариант в свой /etc/hosts
----
+
 
 GitLab будет доступен по ссылке https://gitlab.(мой домен)
 
@@ -56,9 +55,8 @@ IP of host prometheus.(my domain)
 
 IP of host grafana.(my domain)
 
-
 either in DNS, or alternatively in your /etc/hosts
----
+
 
 GitLab will be available at https://gitlab.(my domain) 
 
