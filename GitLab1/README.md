@@ -39,7 +39,8 @@ Grafana будет доступена по ссылке http://grafana.(мой �
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-
+Requirements.
+---
 It is assumed that we have created either a virtual machine running CentOS-Stream-8, or a bare metal host running CentOS-Stream-8.
 
 Ansible has access to this host and can sudo without a password.
